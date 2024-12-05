@@ -1,5 +1,12 @@
 <div class="text-center">
-    Welcome  <b>{{email}}</b> &nbsp;
-    <a [href]="logoutURL">logout</a>
+  Welcome <b>{{ email }}</b> &nbsp;
+  <a [href]="logoutURL">logout</a>
+  <br /><br />
+  <b>User List</b>
+  <ul>
+    <li *ngFor="let user of users">
+      {{ user.name }} -
+      {{ user.email }}
+    </li>
+  </ul>
 </div>
-
